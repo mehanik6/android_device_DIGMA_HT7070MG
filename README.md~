@@ -1,6 +1,6 @@
 # android_device_DIGMA_HT7070MG
 
-LineageOS-14.1 Digma_hit_3G_3r-4r
+LineageOS-13.0 Digma_hit_3G_3r-4r
 
 Basic   | Spec Sheet
 -------:|:-------------------------
@@ -15,7 +15,7 @@ Display | 7" 1024 x 600 px
 
 
 
-repo init -u git://github.com/TestMT6572/android.git -b cm-14.1
+repo init -u git://github.com/LineageOS-MTK/android.git -b cm-13.0
 
 repo sync
 

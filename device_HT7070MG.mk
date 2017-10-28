@@ -22,35 +22,20 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 PRODUCT_PACKAGES += \
     Torch
 
+# MTK Shims
 PRODUCT_PACKAGES += \
+    libmtk_symbols \
     libxlog
-
-# Lights
-PRODUCT_PACKAGES += \
-    lights.mt6572
-
-# Audio
-PRODUCT_PACKAGES += \
-    audio.primary.mt6572 \
-    audio_policy.default \
-    audio.a2dp.default \
-    audio.usb.default \
-    audio.r_submix.default \
-    libaudio-resampler \
-    tinymix
 
 PRODUCT_PACKAGES += \
     lib_driver_cmd_mt66xx
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/audio/audio_policy.conf:system/etc/audio_policy.conf
+    $(LOCAL_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf
     
 # Bluetooth
 PRODUCT_PACKAGES += \
     libbt-vendor
-
-# GSM
-PRODUCT_PACKAGES += libmt6572
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.ril_class=MediaTekRIL
@@ -67,7 +52,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/init.mt6572.rc:root/init.mt6572.rc \
     $(LOCAL_PATH)/rootdir/init.mt6572.usb.rc:root/init.mt6572.usb.rc \
     $(LOCAL_PATH)/rootdir/ueventd.mt6572.rc:root/ueventd.mt6572.rc \
-    $(LOCAL_PATH)/rootdir/sbin/busybox:root/sbin/busybox \
     $(LOCAL_PATH)/rootdir/twrp.fstab:recovery/root/etc/twrp.fstab \
     $(LOCAL_KERNEL):kernel
 
@@ -123,15 +107,12 @@ PRODUCT_PACKAGES += \
 
 # Charger
 PRODUCT_PACKAGES += \
-    charger \
-    charger_res_images \
-    libnl_2 \
-    libtinyxml
+    charger_res_images
 
 # FM Radio
 PRODUCT_PACKAGES += \
-    FMRadio \
-    libfmjni
+    FMRadioGoogle \
+    FmRadioTrampoline2
 
 # GPS
 PRODUCT_COPY_FILES += \

@@ -1,6 +1,6 @@
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
 
-#define BTM_DEF_LOCAL_NAME   "DIGMA HT7070MG"
+#define BTM_DEF_LOCAL_NAME   "DIGMA HIT"
 
 #endif 
